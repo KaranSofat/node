@@ -1,0 +1,48 @@
+<aside id="introduction" class="bodywidth clear" >
+  <div id="introleft">
+    <h2 style='font-size:16px;'>{{detail.question_name}}</h2>
+    <p>{{detail.description}}</p>
+  <p style='float:right;width: 100%;'>Asked By:{{detail.name}}</p>
+   
+  <div>
+   <p style='float: left;width: 86%;'><a ng-click='like()'>Like({{likes}})</a></p>
+    <p <a href=""> Dislike()</a></p>
+  </div>
+  
+  <div style="margin-top: 5%;
+   
+    width: 71%;">
+<h1 style='font-size: 25px;'>Answer</h1> 
+<form>
+
+<textarea name="description" id="ques" style=" height: 75px; width: 161%;" 
+   
+ placeholder = "DESCRIPTION" ng-model="answer.description"></textarea>
+
+
+ <div class="simform__actions" style='width:108px;'>
+              <input class="sumbit" name="commit" type="button" ng-click="addAnswer(detail.id)" value="Submit"  style="width:55% !important;"/>
+
+</div>
+
+
+
+
+
+</div>
+</form>
+   <div id="introleft" ng-repeat='x in answers'>
+    <p>{{x.answer}}</p>
+    <p style='float:right;'>{{x.name}}</p>
+    </div>
+
+  </div>
+  
+  
+  
+  
+  <blockquote id="introquote">
+    <p>This company is amazing. I can't come up with enough good things to say. Literally. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum magna tortor.</p>
+    <p class="quotename">John Smith, <span class="bold">Another Company</span></p>
+  </blockquote>
+</aside>

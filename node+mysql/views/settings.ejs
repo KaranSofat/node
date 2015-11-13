@@ -1,0 +1,52 @@
+ <%- include layouts/header.ejs %>
+ <div class="panel panel-primary" style="width:50%;margin:0 auto; margin-top:10%">
+<div class="panel-heading"><h3>Payment for StackOverflow</h3></div>
+<div class="panel-body" style="height:40%; text-align:center;" >
+<p class="bg-info" id="msg"></p>
+ <form class="form-horizontal" role="form" id="settings" method="post" action="/user/editInfo/" enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="amount">Name:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" placeholder="Enter Name" required="required" value="<%=data[0].name%>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="currency">Email:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="email" placeholder="email" value="<%=data[0].email%>" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="description">Profile</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" name="description" placeholder="Enter Description"><%=data[0].profile%> </textarea>
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" for="currency">Skills:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="skills" placeholder="skills" value="<%=data[0].skills%>" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="currency">Image:</label>
+    <div class="col-sm-10">
+     <input type="hidden" name="oldFile" value="<%=data[0].image%>">
+    <img src="/../images/<%=data[0].image%>" id="imgprvw"  style=" margin: 0 0 20px -82%;  height: 81px;
+    width: 87px;">
+    <input type="file" name="file" onchange="showimagepreview(this)">
+    
+    
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button id="send" class="btn btn-primary btn-lg" type="submit">
+         <span class="glyphicon glyphicon-send" ></span> Submit
+      </button>
+    </div>
+  </div>
+</form>
+</div>
+</div>

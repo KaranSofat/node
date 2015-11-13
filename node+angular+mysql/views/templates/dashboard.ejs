@@ -1,0 +1,90 @@
+
+ <div ng-include="'templates/header.ejs'"></div>
+ <article style=" height: auto;
+    margin-left: 32px;
+    margin-top: 18px;
+    width: 27%;float:left;">
+      <figure> <img alt="" src="/../images/{{userInfo.image}}" style="width: 64%;"> </figure>
+      <p style="margin: 0 0 0 -121px;
+    text-align: center;" ng-click="changeImage()">Change Image</p>
+</article>
+<!--<button ng-click="toggleModal()" class="btn btn-default">Open modal</button>
+ <modal title="Login form" visible="showModal">
+    <form role="form">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" />
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </modal>-->
+
+
+
+<div style="margin-top: 5%;
+    text-align: center;
+    width: 71%;">
+<h1>ASK A Question</h1> 
+<form>
+<input type="text" id="title" name="title" ng-model="Questions.title" placeholder = "TITLE" style="  height: 39px;
+    margin: 19px 0 21px;
+    width: 51%;">
+<textarea name="description" id="ques" style="   height: 75px;
+   
+    width: 51%;"placeholder = "DESCRIPTION" ng-model="Questions.description"></textarea>
+
+
+ <div class="simform__actions">
+              <input class="sumbit" name="commit" type="button" ng-click="addQuestion()" value="Submit"  style="width:55% !important;"/>
+
+</div>
+
+
+
+
+
+</div>
+</form>
+<div style="
+    width: 25%;
+    float: right;
+    position: relative;
+    top: -203px;
+">
+<a href="/user/paypalForm"><img src="/../images/paypal.jpg" style="
+    width: 69%;
+"></a>
+</div>
+ <div style="margin-top: 5%;
+    text-align: center;
+    width: 71%;">
+ <h1 style="  margin: 0 0 15px 13px;
+    text-align: left;">Your Recent Questions</h1> 
+    </div>
+ <div id="maincontent"style='margin: 0 0 40px 28px;
+width: 91%;' class="bodywidth clear" ng-repeat="x in questions">
+
+
+  <div id="aboutleft" >
+    <h3 ng-click='showQuestion()'>{{x.question_name}}</h3>
+    <p>{{x.description}}</p>
+    
+  </div>
+  <div>
+     <a style='float: right;
+margin-right: 100px;
+margin-top: 20px;
+width: 98px;
+padding: 26px;' ng-click='deleteQ(x.id)'  class="readmore">Delete</a>
+     </div>
+ <div>
+
+ </div>
+ </div>
+ </div>
+ 
+

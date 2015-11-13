@@ -1,0 +1,65 @@
+ <%- include layouts/header.ejs %>
+ 
+ <article style=" height: auto;
+    margin-left: 32px;
+    margin-top: 18px;
+    width: 27%;float:left;">
+      <figure> <img alt="" src="/../images/<%=data[0].image%>" style="width: 64%;"> </figure>
+</article>
+<div style="margin-top: 5%;
+    text-align: center;
+    width: 71%;">
+<h1>ASK A Question</h1> 
+<form>
+<input type="text" id="title" name="title" placeholder = "TITLE" style="  height: 39px;
+    margin: 19px 0 21px;
+    width: 51%;">
+<textarea name="description" id="ques" style="   height: 75px;
+   
+    width: 51%;"placeholder = "DESCRIPTION"></textarea>
+
+
+ <div class="simform__actions">
+              <input class="sumbit" name="commit" type="button" onclick="addQuestion()" value="Submit"  style="width:55% !important;"/>
+
+</div>
+
+
+<!--<a href="/user/paypal">Paypal</a>-->
+
+
+</div>
+</form>
+<div style="
+    width: 25%;
+    float: right;
+    position: relative;
+    top: -203px;
+">
+<a href="/user/paypalForm"><img src="/../images/paypal.jpg" style="
+    width: 69%;
+"></a>
+</div>
+ <div style="margin-top: 5%;
+    text-align: center;
+    width: 71%;">
+ <h1 style="  margin: 0 0 15px 13px;
+    text-align: left;">Your Recent Questions</h1> 
+ <div id="maincontent" class="bodywidth clear">
+
+ <% if(dataQ.length){ 
+  for(var i = 0;i < dataQ.length;i++) { %>
+  <div id="aboutleft">
+    <h3><%=dataQ[i].question_name%></h3>
+    <p><%=dataQ[i].description%></p>
+  </div>
+      <% }
+       }else{ %>
+                  <div id="aboutleft">
+                   <h3>No Questions Found</h3>
+                  </div>
+            <% } %>
+ </div>
+ </div>
+ 
+ <!--<%- include layouts/footer.ejs %>-->

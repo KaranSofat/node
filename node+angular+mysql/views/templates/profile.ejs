@@ -1,0 +1,59 @@
+
+ 
+ <article style=" height: auto;
+    margin-left: 32px;
+    margin-top: 18px;
+    width: 27%;float:left;">
+    
+
+    
+      <figure> <img alt="" src="/../images/{{data.image}}" style="width: 64%;"> </figure>
+         <h5 style=" color: #4388c8;
+    font-size: 23px;
+    margin: 14px 0 0 48px;">{{data.name}}</h5>
+</article>
+<section style=" float: left;
+   
+    margin-top: 49px;
+   
+    width: 33%;">
+  
+  
+  
+   <article>
+   
+      <header><a href="#">
+     
+        </a></header>
+         <p>{{data.profile}}</p>
+      <p>{{data.skils}}</p>
+
+
+ 
+   </article>
+
+   
+   
+   
+  </section>
+     <article style="  margin: 12px 0 0 80%;
+    width: 19%;
+}">
+  <p style="  color: green;
+    font-size: 23px;"> points:{{data.points}}</p>
+   </article>
+    <div style="margin-top: 5%;
+    text-align: center;
+    width: 71%;float:left;">
+ <h1 style="  margin: 0 0 15px 13px;
+    text-align: left;">Your Recent Questions</h1> 
+ <div id="maincontent" class="bodywidth clear">
+
+
+  <div id="aboutleft" ng-repeat="x in data2">
+    <h3>{{x.question_name}}</h3>
+    <p>{{x.description}}</p>
+  </div>
+
+ </div>
+ </div>

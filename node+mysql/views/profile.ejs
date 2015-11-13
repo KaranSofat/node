@@ -1,0 +1,69 @@
+ <%- include layouts/header.ejs %>
+ 
+ <article style=" height: auto;
+    margin-left: 32px;
+    margin-top: 18px;
+    width: 27%;float:left;">
+    
+     <% if (data[0].image==null){ %>
+    
+    <figure> <img src="/../images/default.jpg" alt="" style="width:64%;"> </figure>
+     <% } %>
+    
+    
+      <figure> <img alt="" src="/../images/<%=data[0].image%>" style="width: 64%;"> </figure>
+         <h5 style=" color: #4388c8;
+    font-size: 23px;
+    margin: 14px 0 0 48px;"><%=data[0].name%></h5>
+</article>
+<section style=" float: left;
+   
+    margin-top: 49px;
+   
+    width: 33%;">
+  
+  
+  
+   <article>
+   
+      <header><a href="#">
+     
+        </a></header>
+         <p><%=data[0].profile%></p>
+      <p><%=data[0].skills%></p>
+
+
+ 
+   </article>
+
+   
+   
+   
+  </section>
+     <article style="  margin: 12px 0 0 80%;
+    width: 19%;
+}">
+  <p style="  color: green;
+    font-size: 23px;"> points:<%=data[0].points%></p>
+   </article>
+    <div style="margin-top: 5%;
+    text-align: center;
+    width: 71%;float:left;">
+ <h1 style="  margin: 0 0 15px 13px;
+    text-align: left;">Your Recent Questions</h1> 
+ <div id="maincontent" class="bodywidth clear">
+
+ <% if(dataQ.length){ 
+  for(var i = 0;i < dataQ.length;i++) { %>
+  <div id="aboutleft">
+    <h3><%=dataQ[i].question_name%></h3>
+    <p><%=dataQ[i].description%></p>
+  </div>
+      <% }
+       }else{ %>
+                  <div id="aboutleft">
+                   <h3>No Questions Found</h3>
+                  </div>
+            <% } %>
+ </div>
+ </div>

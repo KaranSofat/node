@@ -1,0 +1,2 @@
+ <%- include layouts/header.ejs %>
+ <h1>Payment Canceled</h1>

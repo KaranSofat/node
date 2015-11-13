@@ -1,0 +1,60 @@
+ <div class="">
+  <div class="logmod__wrapper">
+ 
+           <div class="logmod__heading">
+          <span class="logmod__heading-subtitle">Enter your email and password <strong>to sign in</strong></span>
+        </div> 
+        <div class="logmod__form">
+          <form accept-charset="utf-8" action="/user/login" method="POST" class="simform">
+            <div class="sminputs">
+              <div class="input full">
+                <label class="string optional" for="user-name">Email*</label>
+                <input class="string optional" maxlength="255" id="user-email" ng-model ='user.email'placeholder="Email" type="email" name="email"size="50" />
+              </div>
+            </div>
+            <div class="sminputs">
+              <div class="input full">
+                <label class="string optional" for="user-pw">Password *</label>
+                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" ng-model='user.password' type="password" name="pass" size="50" />
+                						<span class="hide-password">Show</span>
+              </div>
+            </div>
+<div style="color: red;
+/* margin-left: 22px; */
+margin: 10px 0 0 20px;
+font-size: 17px;">
+           
+</div>
+            <div class="simform__actions">
+              <input class="sumbit" name="commit" type="button" value="Log In" ng-click="login()"/>
+              <span class="simform__actions-sidetext"><a class="special" role="link" href="#">Forgot your password?<br>Click here</a></span>
+            </div> 
+          </form>
+        </div> 
+        <div class="logmod__alter">
+          <div class="logmod__alter-container">
+            <a href="/auth/facebook" class="connect facebook">
+              <div class="connect__icon">
+                <i class="fa fa-facebook"></i>
+              </div>
+              <div class="connect__context">
+                <span>Sign in with <strong>Facebook</strong></span>
+              </div>
+            </a>
+            <a href="#" class="connect googleplus">
+              <div class="connect__icon">
+                <i class="fa fa-google-plus"></i>
+              </div>
+              <div class="connect__context">
+                <span>Sign in with <strong>Google+</strong></span>
+              </div>
+            </a>
+          </div>
+        </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

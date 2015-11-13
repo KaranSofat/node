@@ -1,0 +1,89 @@
+<%- include layouts/header.ejs %>
+
+
+<aside id="introduction" class="bodywidth clear" >
+  <div id="introleft">
+    <h2>Welcome to <span class="blue">our Stack</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis molestie sapien. Proin elit quam, commodo ut aliquet vel, elementum ut odio. Praesent semper tincidunt magna, sed sagittis elit congue sed. Mauris malesuada, elit ut luctus tristique, lectus libero rutrum mauris, ac tristique.</p>
+    <p><a href="#" class="findoutmore">Find out more?</a></p>
+  </div>
+  <blockquote id="introquote">
+    <p>This company is amazing. I can't come up with enough good things to say. Literally. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum magna tortor.</p>
+    <p class="quotename">John Smith, <span class="bold">Another Company</span></p>
+  </blockquote>
+</aside>
+
+<div id="maincontent" class="bodywidth clear">
+
+ <% if(data.length){ 
+  for(var i = 0;i < data.length;i++) { %>
+  <div id="aboutleft">
+    <h3><%=data[i].question_name%></h3>
+    <p><%=data[i].description%></p>
+  </div>
+      <% }
+       }else{ %>
+                  <div id="aboutleft">
+                   <h3>No Questions Found</h3>
+                  </div>
+            <% } %>
+                
+  <section id="articlesright" style="  left: 61%;
+    position: absolute;">
+  
+  <% if(data2.length){ 
+  for(var i = 0;i < data2.length;i++) { %>
+  
+  
+  
+  
+   
+  
+  
+  
+  <article>
+
+         <% if (data2[i].image==null){ %>
+   <figure> <img src="images/default.jpg" alt="" style="width:100%;"> </figure>
+  <% } else{ %>
+      <figure> <img src="images/<%=data2[i].image%>" alt="" style="width:100%;"> </figure>
+      
+       <% } %>
+      
+      <header><a href="#">
+        <h5><%=data2[i].name%></h5>
+        </a></header>
+         <p><%=data2[i].profile%></p>
+      <p><%=data2[i].skills%></p>
+      <a href="user/profile/<%=data2[i].id%>" class="readmore">View Full Profile</a> </article>
+
+      <% }
+       }else{ %>
+                  <div id="aboutleft">
+                   <h3>No User Found</h3>
+                  </div>
+            <% } %>
+
+
+  
+  
+  
+  
+  
+  
+   
+   
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%- include layouts/footer.ejs %>
