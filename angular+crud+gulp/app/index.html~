@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+   <base href="/app/">
+  <title>Assignment</title>
+ <link rel="stylesheet" href="css/style.css"/>
+  <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+</head>
+<body>
+ <h1>Assignment On AngularJs</h1>
+
+    <div ui-view></div>
+
+
+
+
+</body>
+</html>

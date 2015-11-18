@@ -1,0 +1,34 @@
+web_service_service_homepage:
+    pattern:  /users
+    defaults: { _controller: WebServiceServiceBundle:Service:getUsers }
+    requirements:
+        _method:  GET|POST 
+        _format: JSON 
+        
+web_service_service_add:
+    pattern:  /addUser
+    defaults: { _controller: WebServiceServiceBundle:Service:addUser }
+    requirements:
+        _method:  GET|POST 
+        _format: JSON                
+        
+web_service_service_edit:
+    pattern:  /editUser
+    defaults: { _controller: WebServiceServiceBundle:Service:editUser }
+    requirements:
+        _method:  GET|POST 
+        _format: JSON          
+        
+web_service_service_update:
+    pattern:  /updateInfo
+    defaults: { _controller: WebServiceServiceBundle:Service:updateInfo }
+    requirements:
+        _method:  GET|POST 
+        _format: JSON    
+        
+web_service_service_delete:
+    pattern:  /deleteUser
+    defaults: { _controller: WebServiceServiceBundle:Service:deleteUser }
+    requirements:
+        _method:  GET|POST 
+        _format: JSON               

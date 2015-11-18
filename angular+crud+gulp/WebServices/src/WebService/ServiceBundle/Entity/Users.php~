@@ -1,0 +1,54 @@
+<?php
+namespace WebService\ServiceBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="angular_user")
+ */
+class User
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    public $id;
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $first_name;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $last_name;
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $email;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $company;
+ 
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $designation;
+ 
+      /**
+     * @ORM\Column(type="integer")
+     */
+    public $status;
+
+         /**
+     * @ORM\Column(type="datetime")
+     */
+    public $creation_datetime;
+
+
+
+  
+
+}

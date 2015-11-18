@@ -1,0 +1,48 @@
+ 
+
+ <div class="page-data">
+  <h2> List of All Users</h2>
+         <div class="data-btn">
+           <button ng-click="addUser()">+ Add</button>
+         </div>
+         <div class="data-table">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Designation</th>
+                     <th>Company</th>
+                    <th>Status</th>
+                    <th width="120px">Action</th>
+                </tr>
+                               
+                
+                 
+                <tr ng-repeat = "allusers in users">
+                    <td>{{$index +1}}</td>
+                    <td>{{allusers.first_name}}</td>
+                    <td>{{allusers.last_name}}</td>
+                    <td>{{allusers.email}}></td>
+                    <td>{{allusers.designation}}</td>
+                    <td>{{allusers.company}}</td>
+                    <td ng-if="allusers.status == 1">Active</td>
+                    <td ng-if="allusers.status != 1">Disactive</td>
+                    <td>
+                        <base class="a-inside edit" href="./editUser/{{allusers.id}}">Edit</base>
+                       
+                        <a class="a-inside delete" ng-click="deleteUser(allusers.id)" style="cursor:pointer">Delete</a>
+                       
+                    </td>
+                   
+                </tr>
+              
+                 
+                
+            </table>
+              <div  ng-if="users ==''" class="no_user">
+                 <p>No User Avaliable</p>
+                </div>
+         </div>
+        </div>
