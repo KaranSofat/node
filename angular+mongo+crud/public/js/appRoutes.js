@@ -13,9 +13,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'NerdController'
 		})
 
-		.when('/geeks', {
-			templateUrl: 'views/geek.html',
-			controller: 'GeekController'	
+		.when('/login', {
+			templateUrl: 'views/login.html',
+			controller: 'loginController'	
 		})
     	.when('/addUser', {
 			templateUrl: 'views/addUser.html',
@@ -24,6 +24,14 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
      	.when('/editUser/:id', {
 			templateUrl: 'views/edit.html',
 			controller: 'editUserController'	
+		})
+    .when('/view/:id', {
+			templateUrl: 'views/view.html',
+			controller: 'viewController'	
+		})
+		 .when('/comment_edit/:id/:mainId', {
+			templateUrl: 'views/commentEdit.html',
+			controller: 'commentEditController'	
 		});
 
 	//$locationProvider.html5Mode(true);

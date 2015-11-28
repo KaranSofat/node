@@ -1,0 +1,28 @@
+  <div style="width:20%;float:left;">
+  
+  
+  <form>
+      
+ <div>       <label>Email</label>
+  <input type="text" ng-model='user.email'></div>
+       <div> <label>Address</label>
+  <input type="text" ng-model='user.address'>
+  <input type="button" value="Search" ng-click='search()'></div>
+  </form>                  
+  </div>
+  
+  <div style="float: left;
+    margin: 29px 0 0 66px;
+    width: 82%;">
+  <div ng-repeat="users in data">
+  <p>{{$index +1}}</p>
+  <label>Name</label>
+  <p>{{users.name}}</p>  
+  <label>Email</label>
+  <p>{{users.email}}</p>  
+  <p>-----------------------------------------------</p>
+  </div>
+  <div ng-if="data==''">No User Found</div>
+  </div>
+  
+  

@@ -6,7 +6,7 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var passport = require('passport');
 var expressSession = require('express-session');
-
+var mongojs = require('mongojs');
 // configuration ===========================================
 	if (process.env.MONGOLAB_URI) {
     console.log("Connecting to mongolab...");

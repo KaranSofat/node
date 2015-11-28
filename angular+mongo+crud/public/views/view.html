@@ -1,0 +1,47 @@
+
+<div class="comment">
+<div>
+<p>Name:{{x.name}}</p>
+<p>Email:{{x.email}}</p>
+<p>Address:{{x.address}}</p>
+
+
+</div>
+
+
+<div>
+
+<h1>Write About Us</h1>
+<p> YourName</p>
+<input type="text" ng-model="user.name">
+<p>YourEmail</p>
+<input type="text" ng-model="user.email">
+<p>Comment</p>
+<textarea ng-model="user.comment"></textarea>
+
+<input type="button" value="comment" ng-click="comment(x._id)">
+
+
+</div>
+
+</div>
+<div>
+<h1>User Comments</h1>
+<div ng-repeat="xs in userComments">
+<p>Name:{{xs.uname}}</p>
+<p>Email:{{xs.uemail}}</p>
+<p>Comment:{{xs.comment}}</p>
+<p><a href="#/comment_edit/{{xs._id}}/{{x._id}}">Edit</p>
+<p><a ng-click="delete(xs._id)">Delete</a></p>
+-------------------------------------------
+</div>
+
+</div>
+<style>
+.comment.ng-scope {
+    float: left;
+    width: 50%;
+}
+
+</style>
+

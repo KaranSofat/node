@@ -88,6 +88,113 @@ angular.module('NerdService', []).factory('Nerd', function($http, $q) {
             return defer.promise;
 
         },
+        
+        search: function(data,id) {
+          
+            var Url = '/search';
+
+            var defer = $q.defer();
+
+            $http.post(Url,data).
+            success(function(data, status, headers, config) {
+                defer.resolve(data);
+            }).
+            error(function(data, status, headers, config) {
+                defer.reject();
+            });
+
+            return defer.promise;
+
+        },
+        
+         view: function(id) {
+          
+            var Url = '/view/'+id;
+
+            var defer = $q.defer();
+
+            $http.post(Url).
+            success(function(data, status, headers, config) {
+                defer.resolve(data);
+            }).
+            error(function(data, status, headers, config) {
+                defer.reject();
+            });
+
+            return defer.promise;
+
+        },
+ 
+        comments: function(data,id) {
+          
+            var Url = '/comments/'+id;
+
+            var defer = $q.defer();
+
+            $http.post(Url,data).
+            success(function(data, status, headers, config) {
+                defer.resolve(data);
+            }).
+            error(function(data, status, headers, config) {
+                defer.reject();
+            });
+
+            return defer.promise;
+
+        },
+         commentsEdit: function(id,mainId) {
+          
+            var Url = '/commentsEdit/'+id+'/'+mainId;
+
+            var defer = $q.defer();
+
+            $http.get(Url).
+            success(function(data, status, headers, config) {
+                defer.resolve(data);
+            }).
+            error(function(data, status, headers, config) {
+                defer.reject();
+            });
+
+            return defer.promise;
+
+        },
+        commentsSave: function(id,data) {
+          
+            var Url = '/commentsSave/'+id;
+
+            var defer = $q.defer();
+
+            $http.post(Url,data).
+            success(function(data, status, headers, config) {
+                defer.resolve(data);
+            }).
+            error(function(data, status, headers, config) {
+                defer.reject();
+            });
+
+            return defer.promise;
+
+        },
+ 
+        deleteComments: function(id,data) {
+          
+            var Url = '/deleteComment/'+id;
+
+            var defer = $q.defer();
+
+            $http.post(Url,data).
+            success(function(data, status, headers, config) {
+                defer.resolve(data);
+            }).
+            error(function(data, status, headers, config) {
+                defer.reject();
+            });
+
+            return defer.promise;
+
+        },
+ 
  }
 
 });       

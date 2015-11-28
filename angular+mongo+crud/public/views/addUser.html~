@@ -6,7 +6,7 @@
   <p>Name:{{x.name}}</p>
   <p>Email:{{x.email}}</p>
   <p>Address:{{x.address}}</p>
-  <a ng-click="delete(x._id)">Delete</a> ||   <a href="/#/editUser/{{x._id}}">Edit</a>
+  <a ng-click="delete(x._id)">Delete</a> ||   <a href="/#/editUser/{{x._id}}">Edit</a> ||  <a href="/#/view/{{x._id}}"></a>
   <br>----------------------------------------<br>
   </div>
   </div>
